@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./assets/simple-adaptive-slider.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>JuMe.</title>
+</head>
+<body>
+    <header>
+        <div class="header-menu">
+
+            <div class="logo">
+                <h1>JuMe.</h1>
+            </div>
+
+            <div class="top-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Portfolio</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="home-page">
+        <div class="home-container">
+            <div class="home-text">
+                <div class="text">
+                <h1>
+                    <div id="typed"></div>
+                </h1>
+                <h1>I'm JuMe,</h1>
+                <h1>developer.</h1>
+            </div>
+
+            <div class="connect-button">
+                <a href="#contacts">Connect Me</a>
+            </div>
+        </div>
+
+            <div class="home-picture">
+                <img src="./assets/images/nlp-neurolinguistic-programation.png" alt="Icon">
+            </div>
+
+        </div>
+    </div>
+
+    <section class="section-about">
+        <a name="about"></a>
+        <div class="about-container">
+            <div class="about-header">
+                <h1>About Me</h1>
+            </div>
+            <div class="inner-about">
+            <div class="about-info">
+                <div class="about-text">
+                    <p>Hi, I'm JuMe or Julia and I'm a Russian programmer. I study different areas of programming and constantly improve my skills.</p>
+                </div>
+
+                <div class="current-info">
+                    <p>Age: 17</p>
+                    <p>Location: Russia</p>
+                    <p>Education: College</p>
+                </div>    
+            </div>
+                <div class="about-skills">
+                    <div class="card">
+                        <img src="./assets/images/free-icon-c-sharp-6132221.png" alt="C#" >
+                        <div class="container">
+                          <label for="skillC#">Skill</label>
+                          <progress id="skillC#" max="100" value="15"> 15% </progress>
+                          <label for="expC#">Experience</label>
+                          <progress id="expC#" max="100" value="0"> 0% </progress>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="./assets/images/free-icon-c-6132222.png" alt="C++">
+                        <div class="container">
+                          <label for="skillC++">Skill</label>
+                          <progress id="skillC++" max="100" value="15"> 15% </progress>
+                          <label for="expC++">Experience</label>
+                          <progress id="expC++" max="100" value="0"> 0% </progress>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <a name="projects"></a>
+        <div class="portfolio-header">
+            <h1>Portfolio</h1>
+        </div>
+        <div class="portfolio-container">
+            <!-- Разметка слайдера (html код) -->
+<div class="itcss">
+    <div class="itcss__wrapper">
+      <div class="itcss__items">
+        <div class="itcss__item">
+          <img class="img-fluid" src="./assets/images/ToDo.png" alt="ToDo">
+        </div>
+        <div class="itcss__item">
+            <img class="img-fluid" src="./assets/images/Joke.png" alt="ToDo">
+        </div>
+        <div class="itcss__item">
+            <img class="img-fluid" src="./assets/images/Таймер.png" alt="ToDo">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn-wrapper">
+    <button class="btn btn-prev">1</button>
+    <button class="btn btn-next">2</button>
+  </div>
+        </div>
+</section>
+
+<section class="contacts">
+    <a name="contacts"></a>
+    <div class="contacts-header">
+        <h1>Contacts</h1>
+    </div>
+    <div class="contacts-inner">
+        <div class="contacts-container">
+            <div class="contacts-text">
+                <h1>Connect</h1>
+                <p>juliakoroleva2k17@mail.ru</p>
+                <p>+79856609565</p>
+            </div>
+            <div class="address">
+                <h1>Address</h1>
+                <p>Tver, Zinaida Konoplyannikova street, 8</p>
+            </div>
+            <div class="contacts-social">
+                <a href="https://vk.com/tyta9i">
+                    <img src="./assets/images/vk.png" alt="">
+                </a>
+                <a href="https://t.me/TyTa9I">
+                    <img src="./assets/images/tg.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="contacts-picture">
+            <img src="./assets/images/contact-us.png" alt="">
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script defer src="./assets/simple-adaptive-slider.js"></script>
+<script>
+      let typed = new Typed('#typed', {
+        typeSpeed: 100,
+        backSpeed: 50,
+        startDelay: 500,
+        loop: true,
+        strings: ["Hi,", "Hallo,", "Привет,", "Bonjour,",
+         "Ciao,", "Hola,", "Olá,", "Salem,"]
+      })
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  // инициализация слайдера
+  const slider = new ItcSimpleSlider('.itcss', {
+  loop: true,
+  autoplay: true,
+  interval: 2000,
+  swipe: true,
+});
+  // назначим обработчик при нажатии на кнопку .btn-prev
+  document.querySelector('.btn-prev').onclick = () => {
+    // перейдём к предыдущему слайду
+    slider.prev();
+  }
+  // назначим обработчик при нажатии на кнопку .btn-next
+  document.querySelector('.btn-next').onclick = () => {
+    // перейдём к следующему слайду
+    slider.next();
+  }
+});
+</script>
+</body>
+</html>

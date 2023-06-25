@@ -1,0 +1,301 @@
+/*Плавный скролл*/
+html{
+    scroll-behavior: smooth;
+  }
+
+/*Удаление отступов*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Настройки тела*/
+body{
+    background: #2D283E;
+    font-family: 'Montserrat', sans-serif;
+    color: #802BB1;
+}
+/*Расположения лого и меню*/
+.logo, .top-menu{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+}
+/*Настройки меню*/
+.top-menu li{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+}
+/*настройки блока меню*/
+header{
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    
+}
+/*Настройка ссылок*/
+.top-menu a{
+    color: #802BB1;
+    text-decoration: none;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 25px;
+    transition: .3s linear;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+/*Ссылки после наведения*/
+.top-menu a:after{
+    display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #802BB1; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+/*Анимация*/
+.top-menu a:hover:after,
+.top-menu a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+/*Настройки лого*/
+.logo{
+    color: #D1D7E0;
+}
+/*Настройки главной страницы*/
+.home-container{
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+/*Настройка текста главной страницы*/
+.home-text{
+    margin-left: 50px;
+    margin-top: 60px;
+    color: #D1D7E0;
+    font-size: 60px;
+    vertical-align: middle;
+}
+/*Настройка печатающегося текста*/
+#typed{
+    display: inline-block;
+}
+/*Настойка картинки*/
+.home-picture{
+    float: right;
+    margin-top: 60px;
+    margin-right: 80px;
+    vertical-align: middle;
+}
+
+/*Настройка кнопки connect me*/
+.home-text a{
+    background-color: transparent;
+    user-select: none;
+    text-decoration: none;
+    border: #802BB1 solid 8px;
+    border-radius: 10px;
+    color: #802BB1;
+    margin-top: 10px;
+}
+/*Отсутп между текстом и кнопкой*/
+.text{
+    margin-bottom: 50px;
+}
+
+.section-about{
+    padding: 85px 0;
+}
+
+.about-container{
+    width: 100%;
+    height: 100%;
+}
+
+.about-header{
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    color: #802BB1;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.about-info{
+    width: 650px;
+    color: #D1D7E0;
+    font-size: 40px;
+    margin-left: 50px;
+}
+
+.current-info{
+    margin-top: 70px;
+}
+
+.about-text{
+    text-align: justify;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    width: 350px;
+    font-size: 20px;
+    margin-right: 40px;
+    color: #4C495D;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+.card img {
+    border-radius: 5px 5px 0 0;
+    width: 350px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+.inner-about{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-skills{
+    display: flex;
+}
+
+progress{
+    width: 100%;
+    accent-color: #802BB1;
+}
+
+.portfolio-header{
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    color: #802BB1;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.portfolio-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-section{
+    padding: 60px 0;
+}
+
+.itcss{
+    max-width: 900px;
+    border: #4C495D solid 10px;
+    border-radius: 10px;
+}
+
+.itcss__item {
+    position: relative;
+  }
+
+  .img-fluid {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+  }
+
+.itcss__indicators{
+    color: #802BB1;
+}
+
+.btn-wrapper button{
+    background-color: #2D283E;
+    color: transparent;
+    border: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.btn-prev{
+    background-image: url(./images/prev.png);
+    background-size: cover;
+}
+
+.btn-next{
+    background-image: url(./images/next.png);
+    background-size: cover;
+}
+
+.contacts{
+    padding: 85px 0;
+}
+
+.contacts-header{
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    color: #802BB1;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.contacts-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contacts-container{
+    width: 700px;
+    height: 550px;
+    background-color: #4C495D;
+    border-radius: 20px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contacts-container h1{
+    color: #564F6F;
+    font-size: 70px;
+}
+
+.contacts-container p{
+    color: #D1D7E0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.contacts-social img{
+    width: 10%;
+    transition: 0.3 linear;
+}
+
+.contacts-social img:hover{
+    width: 11%;
+    transition: 0.3 linear;
+}
+
+.address{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
